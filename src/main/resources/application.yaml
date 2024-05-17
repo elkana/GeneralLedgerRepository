@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://10.10.2.92:5432/postgres
+    username: postgres
+    password: PPU.P4ssw0rd
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: General_Ledger
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    
