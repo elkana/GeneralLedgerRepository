@@ -18,7 +18,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name= "GL_GROUP")
-
 public class GlGrup {
 
 	@Id
