@@ -19,25 +19,25 @@ public class GlTypeMaster {
 	
 	@Id
 	@Column(name="TYPE_CODE",length=10,  nullable = false)
-	private String type_code;
+	private String gltmtypecode;
 	
 	@Column(name="TYPE_DESC",length=50)
-	private String type_desc;
+	private String gltmtypedesc;
 	
 	@Column(name="AC_STATUS",length=2)
-	private String ac_status;
+	private String gltmacstatus;
 	
 	@Column(name="AC_USER_CRE",length=15)
-	private String ac_user_cre;
+	private String gltmacusercre;
 	 
 	@Column(name="AC_DATE_CRE")
-	private Date ac_date_cre;
+	private Date gltmacdatecre;
 	 
 	@Column(name="AC_USER_UPD",length=15)
-	private String ac_user_upd;
+	private String gltmacuserupd;
 	 
 	@Column(name="AC_DATE_UPD")
-	private Date ac_date_upd;
+	private Date gltmacdateupd;
 	
 
 }

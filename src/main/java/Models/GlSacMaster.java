@@ -19,30 +19,30 @@ public class GlSacMaster {
 	
 	@Id
 	@Column(name="SAC_CODE",length=20,  nullable = false)
-	private String sac_acc;
+	private String glsmsacacc;
 	
 	@Column(name="SAC_SUB",length=20)
-	private String sac_sub;
+	private String glsmsacsub;
 	
 	@Column(name="ASC_DESC",length=50)
-	private String asc_desc;
+	private String glsmascdesc;
 	
 	@Column(name="AC_STATUS",length=2)
-	private String ac_status;
+	private String glsmacstatus;
 	
 	@Column(name="AC_USER_CRE",length=15)
-	private String ac_user_cre;
+	private String glsmacusercre;
 	 
 	@Column(name="AC_DATE_CRE")
-	private Date ac_date_cre;
+	private Date glsmacdatecre;
 	 
 	@Column(name="AC_USER_UPD",length=15)
-	private String ac_user_upd;
+	private String glsmacuserupd;
 	 
 	@Column(name="AC_DATE_UPD")
-	private Date ac_date_upd;
+	private Date glsmacdateupd;
 	
 	@Column(name="ASC_STATUS",length=2)
-	private String asc_status;
+	private String glsmascstatus;
 
 }

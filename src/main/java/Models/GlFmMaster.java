@@ -19,51 +19,51 @@ public class GlFmMaster {
 	
 	@Id
 	@Column(name="FM_FPOS",length=20,  nullable = false)
-	private String fm_fpos;
+	private String glfmfmfpos;
 	
 	@Column(name="FM_DESC",length=50)
-	private String fm_desc;
+	private String glfmfmdesc;
 	
 	@Column(name="FM_TYPE",length=1)
-	private String fm_type;
+	private String glfmfmtype;
 	
 	@Column(name="FM_LEVEL")
-	private Integer fm_level;
+	private Integer glfmfmlevel;
 	
 	@Column(name="FM_SUM_INTO",length=20)
-	private String fm_sum_into;
+	private String glfmfmsuminto;
 	
 	@Column(name="FM_DB_CR",length=1)
-	private String fm_db_cr;
+	private String glfmfmdbcr;
 	
 	@Column(name="FM_HEADER",length=1)
-	private String fm_header;
+	private String glfmfmheader;
 	
 	@Column(name="FM_NEW_PAGE",length=1)
-	private String fm_new_page;
+	private String glfmfmnewpage;
 	
 	@Column(name="FM_TOTAL",length=1)
-	private String fm_total;
+	private String glfmfmtotal;
 	
 	@Column(name="FM_UNDERLINE",length=1)
-	private String fm_underline;
+	private String glfmmunderline;
 	
 	@Column(name="FM_SKIP",length=1)
-	private String fm_skip;
+	private String glfmfmskip;
 	
 	@Column(name="AC_STATUS",length=2)
-	private String ac_status;
+	private String glfmacstatus;
 	
 	@Column(name="AC_USER_CRE",length=15)
-	private String ac_user_cre;
+	private String glfmacusercre;
 	 
 	@Column(name="AC_DATE_CRE")
-	private Date ac_date_cre;
+	private Date glfmacdatecre;
 	 
 	@Column(name="AC_USER_UPD",length=15)
-	private String ac_user_upd;
+	private String glfmacuserupd;
 	 
 	@Column(name="AC_DATE_UPD")
-	private Date ac_date_upd;
+	private Date glfmacdateupd;
 
 }

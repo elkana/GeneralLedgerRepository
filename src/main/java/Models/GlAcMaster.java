@@ -19,72 +19,72 @@ public class GlAcMaster {
 	
 	@Id
 	@Column(name="AC_CODE",length=20,  nullable = false)
-	private String ac_code;
+	private String glamaccode;
 	
 	@Column(name="AC_DESC",length=50)
-	private String ac_desc;
+	private String glamacdesc;
 	
 	@Column(name="AC_DESC2",length=50)
-	private String ac_desc2;
+	private String glamacdesc2;
 	
 	@Column(name="AC_FPOS",length=20)
-	private String ac_fpos;
+	private String glamacfpos;
 	
 	@Column(name="AC_GROUP",length=20)
-	private String ac_group;
+	private String glamacgroup;
 	
 	@Column(name="AC_TYPE",length=10)
-	private String ac_type;
+	private String glamactype;
 	
 	@Column(name="AC_ENT",length=20)
-	private String ac_ent;
+	private String glamacent;
 	
 	@Column(name="AC_OFF",length=20)
-	private String ac_off;
+	private String glamacoff;
 	
 	@Column(name="AC_ACC",length=20)
-	private String ac_acc;
+	private String glamacacc;
 	
 	@Column(name="AC_SUB",length=20)
-	private String ac_sub;
+	private String glamacsub;
 	
 	@Column(name="AC_CC",length=20)
-	private String ac_cc;
+	private String glamaccc;
 	
 	@Column(name="AC_PL",length=20)
-	private String ac_pl;
+	private String glamacpl;
 	
 	@Column(name="AC_PJ",length=20)
-	private String ac_pj;
+	private String glamacpj;
 	
 	@Column(name="AC_FU1",length=20)
-	private String ac_fu1;
+	private String glamacfu1;
 	
 	@Column(name="AC_FU2",length=20)
-	private String ac_fu2;
+	private String glamacfu2;
 	
 	@Column(name="AC_FU3",length=20)
-	private String ac_fu3;
+	private String glamacfu3;
 	
 	@Column(name="AC_FU4",length=20)
-	private String ac_fu4;
+	private String glamacfu4;
 	
 	@Column(name="AC_FU5",length=20)
-	private String ac_fu5;
+	private String glamacfu5;
 	
 	@Column(name="AC_STATUS",length=2)
-	private String ac_status;
+	private String glamacstatus;
 	
 	@Column(name="AC_USER_CRE",length=15)
-	private String ac_user_cre;
+	private String glamacusercre;
 	 
 	@Column(name="AC_DATE_CRE")
-	private Date ac_date_cre;
+	private Date glamacdatecre;
 	 
 	@Column(name="AC_USER_UPD",length=15)
-	private String ac_user_upd;
+	private String glamacuserupd;
 	 
 	@Column(name="AC_DATE_UPD")
-	private Date ac_date_upd;
+	private Date glamacdateupd;
 
 }
