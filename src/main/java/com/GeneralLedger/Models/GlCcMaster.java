@@ -1,4 +1,4 @@
-package Models;
+package com.GeneralLedger.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,17 +11,17 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "GL_PL_MSTR")
-public class GlPlMaster {
+@Table(name = "GL_CC_MSTR")
+public class GlCcMaster {
 	@Id
-	@Column(name="PL_CODE",length=20,  nullable = false)
-	private String glPlCode;
+	@Column(name="CC_CODE",length=20,  nullable = false)
+	private String glCcCode;
 
-	@Column(name="PL_DESC",length=50,  nullable = false)
-	private String glPlDesc;
+	@Column(name="CC_DESC",length=50,  nullable = false)
+	private String glCcDesc;
 	
-	@Column(name="PL_STATUS",length=2,  nullable = false)
-	private String glPlStatus;
+	@Column(name="CC_STATUS",length=2,  nullable = false)
+	private String glCcStatus;
 	
 	 @Column(name="AC_USER_CRE",length=20)
 	 private String fmFPosUserCrea;

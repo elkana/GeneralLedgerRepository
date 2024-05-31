@@ -1,4 +1,4 @@
-package Models;
+package com.GeneralLedger.Models;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -17,22 +17,25 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "GL_PL_DET")
-@IdClass(GlPlDetailCompKey.class)
-public class GlPlDetail {
+@Table(name = "GL_PJ_DET")
+@IdClass(GlPjDetailCompKey.class)
+public class GlPjDetail {
 	@Id
-	@Column(name="PL_CODE",length=20,  nullable = false)
-	private String glPlDtlCode;
+	@Column(name="PJ_CODE",length=20,  nullable = false)
+	private String glPjDtlCode;
 	
 	@Id
-	@Column(name="PLD_ACC", length=20,nullable = false)
-	private String glPlDtlAcc;
+	@Column(name="PJD_SEQ",nullable = false)
+	private Integer glPjDtlSeqNo;
 	
-	@Column(name="PLD_AC_TYPE", length=10,nullable = false)
-	private String glPlDtlType;
+	@Column(name="PJD_ACC_BEG",length=20)
+	private String glPjDtlBeg;
 	
-	@Column(name="PLD_STATUS",length=2,  nullable = false)
-	private String glPlDtlStatus;
+	@Column(name="PJD_ACC_END",length=20)
+	private String glPjDtlEnd;
+	
+	@Column(name="PJD_STATUS",length=2,  nullable = false)
+	private String glPjDtlStatus;
 	
 	 @Column(name="AC_USER_CRE",length=20)
 	 private String fmFPosUserCrea;

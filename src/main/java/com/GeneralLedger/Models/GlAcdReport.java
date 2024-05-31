@@ -1,4 +1,4 @@
-package Models;
+package com.GeneralLedger.Models;
 
 import java.math.BigDecimal;
 import java.util.Date;

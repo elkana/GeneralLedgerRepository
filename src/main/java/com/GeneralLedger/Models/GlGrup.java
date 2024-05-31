@@ -1,4 +1,4 @@
-package Models;
+package com.GeneralLedger.Models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,7 +37,7 @@ public class GlGrup {
 	private Date grupCreateDate;	
 	
 	@Column (name="AC_USER_UPD", length=20)
-	private Boolean grupUpdateUser;
+	private String grupUpdateUser;
 
 	@Column (name="AC_DATE_UPD", length=20)
 	private Date grupUpdateDate;

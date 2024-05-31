@@ -1,4 +1,4 @@
-package Models;
+package com.GeneralLedger.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

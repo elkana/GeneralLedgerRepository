@@ -1,4 +1,4 @@
-package Models;
+package com.GeneralLedger.Models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,9 +13,11 @@ import jakarta.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class GlPlDetailCompKey implements Serializable{
+public class GlAcdReportCompKey  implements Serializable{
 	
-	private String glPlDtlCode;
-	private String glPlDtlAcc;
+	private Integer GlAcdRptYear;
+	private Integer GlAcdRptMonth;
+	private String GlAcdRptAcc;
+	private String GlAcdRptSub;
 
 }
