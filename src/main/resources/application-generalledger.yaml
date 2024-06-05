@@ -15,4 +15,4 @@ spring:
     init:
       mode: always
       continue-on-error: true
-      platform: oracle
+      platform: postgres
