@@ -1,6 +1,7 @@
 package com.GeneralLedger.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ public class ServiceVGlTransMaster {
 		return repoVgtm.findAll();
 	}
 	
-	public List<VGlTransMaster> GgtVTransCU(String reffNo){
+	public Optional<VGlTransMaster> GgtVTransCU(String reffNo){
 		return repoVgtm.findByVgtmRef(reffNo);
 	}
 	

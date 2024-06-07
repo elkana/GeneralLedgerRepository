@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,9 +33,11 @@ public class GlGltDet {
 	private String glGltDtlAdCode;
 	
 	@Column(name="GL_DATE")
+	 @JsonFormat(pattern = "dd/MM/yy")
 	private Date glGltDtlGlDate;
 	
 	@Column(name="GL_EFF_DATE")
+	 @JsonFormat(pattern = "dd/MM/yy")
 	private Date glGltDtlEffDate;
 	
 	@Column(name="GL_DOC_NO",length=20)
@@ -115,16 +119,18 @@ public class GlGltDet {
 	private String glGltDtlBatchdate;
 
 	 @Column(name="AC_USER_CRE",length=20)
-	 private String fmFPosUserCrea;
+	 private String glGltDtlUserCrea;
 	 
 	 @Column(name="AC_DATE_CRE")
-	 private Date fmFPosDateCrea;
+	 @JsonFormat(pattern = "dd/MM/yy")
+	 private Date glGltDtlDateCrea;
 	 
 	 @Column(name="AC_USER_UPD",length=20)
-	 private String fmFPosUserUpd;
+	 private String glGltDtlUserUpd;
 	 
 	 @Column(name="AC_DATE_UPD")
-	 private Date fmFPosDateUpd;
+	 @JsonFormat(pattern = "dd/MM/yy")
+	 private Date glGltDtlDateUpd;
 
 
 }

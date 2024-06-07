@@ -1,6 +1,7 @@
 package com.GeneralLedger.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -13,7 +14,7 @@ import com.GeneralLedger.Models.VGlTransMaster;
 @Repository
 public interface IVGlTransMasterRepository extends JpaRepository<VGlTransMaster, String>{
 	
-	public List<VGlTransMaster> findByVgtmRef(String reffNo);
+	public Optional<VGlTransMaster> findByVgtmRef(String reffNo);
 	
 
 }
