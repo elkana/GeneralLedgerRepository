@@ -1,5 +1,6 @@
 package com.GeneralLedger.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,6 +13,8 @@ import com.GeneralLedger.Models.GlTypeMaster;
 public interface IGlTypeMaster extends JpaRepository<GlTypeMaster, String>{
 	
 	Optional<GlTypeMaster> findBygltmtypecode(String code);
+	
+	List<GlTypeMaster> findBygltmacstatus(String status);
 	
 	/*@Query(value = "delete from gl_type_mstr S WHERE type_code=?1",nativeQuery = true)
     int getDelByTypeCode(String code);*/

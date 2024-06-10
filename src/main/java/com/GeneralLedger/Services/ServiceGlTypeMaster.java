@@ -19,6 +19,10 @@ public class ServiceGlTypeMaster {
 		return repoTypeMst.findAll();
 	}
 	
+	public List<GlTypeMaster> getGlStsType(String status){
+		return repoTypeMst.findBygltmacstatus(status);
+	}
+	
 	public String saveUpdateTypeMaster(GlTypeMaster type) {
 		repoTypeMst.save(type);
 		return "Submit Successfully";
