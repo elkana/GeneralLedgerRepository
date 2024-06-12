@@ -25,19 +25,19 @@ public class GlAlMaster {
 	@Column (name="AL_CODE", length=20, nullable = false)
 	private String glAlCode;
 
-	@Column (name="AL_DESC", length=50, nullable = false)
+	@Column (name="AL_DESC", length=50)
 	private String glAlDesc;
 	
-	@Column (name="AL_STATUS", length=2, nullable = false)
+	@Column (name="AL_STATUS", length=2)
 	private String glAlStatus;
 	
-	@Column (name="AC_USER_CRE", length=20)
+	@Column (name="AC_USER_CRE", length=15)
 	private String glAlCreateUser;
 	
 	@Column (name="AC_DATE_CRE")
 	private Date glAlCreateDate;	
 	
-	@Column (name="AC_USER_UPD", length=20)
+	@Column (name="AC_USER_UPD", length=15)
 	private String glAlUpdateUser;
 
 	@Column (name="AC_DATE_UPD")
