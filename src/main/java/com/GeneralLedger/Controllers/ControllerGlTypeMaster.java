@@ -23,6 +23,11 @@ public class ControllerGlTypeMaster {
 		return servTypeMst.getGlTypeMaster();
 	}
 	
+	@GetMapping("/GeneralLedger/getgltypestatuslist")
+	public List<GlTypeMaster> getGlTypeStatus(String status){
+		return servTypeMst.getGlStsType(status);
+	}
+	
 	@PostMapping("/GeneralLedger/saveupdtypemst")
 	public String saveUpdateProduksi(@RequestBody GlTypeMaster type) {
 		return servTypeMst.saveUpdateTypeMaster(type);
