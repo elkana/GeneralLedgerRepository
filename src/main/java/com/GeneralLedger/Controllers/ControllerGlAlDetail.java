@@ -13,23 +13,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yaml.snakeyaml.events.Event.ID;
 
-import com.GeneralLedger.Models.GlAlMaster;
-import com.GeneralLedger.Services.ServiceGlAlMaster;
-
+import com.GeneralLedger.Models.GlAlDetail;
+import com.GeneralLedger.Services.ServiceGlAlDetail;
 
 @RestController
-public class ControllerGlAlMaster {
+public class ControllerGlAlDetail {
 	@Autowired
-	ServiceGlAlMaster servGlAlMaster;
+	ServiceGlAlDetail servGlAlDetail;
 	
-	@GetMapping("/GeneralLedger/getglalmasterlist")
-	public List<GlAlMaster> getGlAlMasterList(){
-		return servGlAlMaster.getGlAlMasterList();
+	@GetMapping("/GeneralLedger/getglaldetaillist")
+	public List<GlAlDetail> getGlAlDetail(String alcodemsdtl){
+		return servGlAlDetail.getGlAlDetail(alcodemsdtl);
 	}
-	
-	@GetMapping("/GeneralLedger/getglalmastercu")
-	public List<GlAlMaster> getGlMasterCU(String alCode){
-		return servGlAlMaster.getGlMasterCU(alCode);
-	}
-
 }
