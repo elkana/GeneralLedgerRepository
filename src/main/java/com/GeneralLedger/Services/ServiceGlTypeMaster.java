@@ -36,5 +36,10 @@ public class ServiceGlTypeMaster {
 		repoTypeMst.getDelByTypeCode(code);
 		return "Delete Successfully";
 	}
+	
+	public String DelTypeMasterById(String code) {
+		repoTypeMst.deleteById(code);
+		return "Delete Successfully";
+	}
 
 }
