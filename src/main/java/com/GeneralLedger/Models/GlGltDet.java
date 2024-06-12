@@ -15,13 +15,15 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @AllArgsConstructor
 @Entity
 @Table(name = "GL_GLT_DETAIL")
+@IdClass(GlGltDetailCompkey.class)
 public class GlGltDet {
 	@Id
 	@Column(name="GL_REF",length=20,  nullable = false)
 	private String glGltDtlRef;
 	
+	@Id
 	@Column(name="GL_SEQ_NO",length=20,  nullable = false)
-	private BigDecimal glDltDtlSeqNo;
+	private Integer glDltDtlSeqNo;
 	
 	@Column(name="GL_DESC",length=50,  nullable = false)
 	private String glGltDtlDesc;

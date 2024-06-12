@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.GeneralLedger.Models.GlGltDet;
@@ -14,6 +15,9 @@ import com.GeneralLedger.Models.GlGltDet;
 @Repository
 public interface IGlGltDtailRepository extends JpaRepository<GlGltDet,String> {
 
-		public Optional<GlGltDet> findByGlGltDtlRef(String reffno);
+		public List<GlGltDet> findByGlGltDtlRef(String reffno);
+		
+		@Procedure(procedureName = "P_POST_JOURNAL")
+		public String runPostJournal(String p_reffno, String msg);	
 }
 

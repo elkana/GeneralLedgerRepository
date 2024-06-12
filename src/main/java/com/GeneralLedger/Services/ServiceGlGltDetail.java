@@ -16,16 +16,18 @@ public class ServiceGlGltDetail {
 	@Autowired
 	IGlGltDtailRepository repoGltDtl;
 	
-	public Optional<GlGltDet> getJournalMstCu(String reffNo){
+	public List<GlGltDet> getJournalMstList(String reffNo){
 		return repoGltDtl.findByGlGltDtlRef(reffNo);
 	}
 	
-	public List<GlGltDet> getJournalMstList(){
-		return repoGltDtl.findAll();
-	}
 	
 	public String saveUpdateJournal(GlGltDet glt) {
 		repoGltDtl.save(glt);
 		return "Submit Successfully";
+	}
+	
+	public String execPostJuournal(String p_reffno, String msg) {
+		return repoGltDtl.runPostJournal(p_reffno, msg);
+		
 	}
 }

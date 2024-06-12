@@ -19,19 +19,21 @@ public class ControllerGlGltDetail {
 	@Autowired
 	ServiceGlGltDetail servGltDtl;
 	
-	@GetMapping("/journal/getjournalcu")
-	public Optional<GlGltDet> getJournalMstCu(String reffNo){
-		return servGltDtl.getJournalMstCu(reffNo);
+	@GetMapping("/journal/getjournallist")
+	public List<GlGltDet> getJournalMstCu(String reffNo){
+		return servGltDtl.getJournalMstList(reffNo);
 	}
 	
-	@GetMapping("/journal/getjournallist")
-	public List<GlGltDet> getJournalMstList(){
-		return servGltDtl.getJournalMstList();
+	
+	@GetMapping("/journal/execpostjournal")
+	public String execPostJuournal(String p_reffno,  String msg) {
+		return servGltDtl.execPostJuournal(p_reffno, msg) ;
 	}
+
 	
 	@PostMapping("/journal/saveupdjournal")
 	public String saveUpdateProduksi(@RequestBody GlGltDet glt) {
-		return servGltDtl.saveUpdateJournal(glt);
-	
+		return servGltDtl.saveUpdateJournal(glt);	
 	}
+	
 }
