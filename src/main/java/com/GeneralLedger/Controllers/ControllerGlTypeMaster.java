@@ -49,8 +49,7 @@ public class ControllerGlTypeMaster {
 	@DeleteMapping("/GeneralLedger/delTypemstbytypecode")
 	public String DelFuMaster(String code) {
 		return servTypeMst.DelTypeMaster(code);
-	
+
 	}
 	
-
 }
