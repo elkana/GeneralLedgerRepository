@@ -23,7 +23,7 @@ public class ServiceGlGltDetail {
 	
 	public String saveUpdateJournal(GlGltDet glt) {
 		repoGltDtl.save(glt);
-		return "Submit Successfully";
+		return "Submit Successfully 1231";
 	}
 	
 	public String execPostJuournal(String p_reffno, String msg) {
