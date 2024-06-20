@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,24 +23,28 @@ public class GlPjMaster {
 	private String glPjDesc;
 	
 	@Column(name="PJ_START")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date glPjStart;
 	
 	@Column(name="PJ_END")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date glPjEnd;
 	
 	@Column(name="PJ_STATUS",length=2,  nullable = false)
 	private String glPjStatus;
 	
-	 @Column(name="AC_USER_CRE",length=20)
-	 private String fmFPosUserCrea;
+	@Column(name="AC_USER_CRE",length=20)
+    private String glPjUserCrea;
 	 
-	 @Column(name="AC_DATE_CRE")
-	 private Date fmFPosDateCrea;
+	@Column(name="AC_DATE_CRE")
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private Date glPjDateCrea;
 	 
-	 @Column(name="AC_USER_UPD",length=20)
-	 private String fmFPosUserUpd;
+	@Column(name="AC_USER_UPD",length=20)
+	private String glPjUserUpd;
 	 
-	 @Column(name="AC_DATE_UPD")
-	 private Date fmFPosDateUpd;
+	@Column(name="AC_DATE_UPD")
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private Date glPjDateUpd;
 
 }
