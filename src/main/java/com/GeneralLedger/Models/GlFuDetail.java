@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name= "GL_FU_DET")
-
+@IdClass(GlFuDetailCompKey.class)
 public class GlFuDetail {
 	
 	@Id
@@ -28,6 +29,7 @@ public class GlFuDetail {
 	@Column (name="FU_CODE", length=20)
 	private String glFuCodeDet;
 	
+	@Id
 	@Column (name="FUD_SEQ_DET", nullable = false)
 	private Integer glFuSeqDet;
 	

@@ -38,15 +38,15 @@ public class GlPjDetail {
 	private String glPjDtlStatus;
 	
 	 @Column(name="AC_USER_CRE",length=20)
-	 private String fmFPosUserCrea;
+	 private String glPjDtlUserCrea;
 	 
 	 @Column(name="AC_DATE_CRE")
-	 private Date fmFPosDateCrea;
+	 private Date glPjDtlDateCrea;
 	 
 	 @Column(name="AC_USER_UPD",length=20)
-	 private String fmFPosUserUpd;
+	 private String glPjDtlUserUpd;
 	 
 	 @Column(name="AC_DATE_UPD")
-	 private Date fmFPosDateUpd;
+	 private Date glPjDtlDateUpd;
 
 }

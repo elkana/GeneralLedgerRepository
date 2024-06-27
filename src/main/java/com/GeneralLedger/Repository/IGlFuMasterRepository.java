@@ -12,8 +12,8 @@ import com.GeneralLedger.Models.GlFuMaster;
 @Repository
 public interface IGlFuMasterRepository extends JpaRepository<GlFuMaster, Integer> {
 	
-	Optional<GlFuMaster> findByglFuSeq(Integer seq);
-	
 	List<GlFuMaster> findByglFuStatusAndGlFuSeq(String status,Integer Seqno);
+	
+	Optional<GlFuMaster> findByglFuSeq(Integer seq);
 
 }
