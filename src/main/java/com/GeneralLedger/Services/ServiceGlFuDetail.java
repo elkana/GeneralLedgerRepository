@@ -29,6 +29,11 @@ public class ServiceGlFuDetail {
 		return "Submit Successfully";
 	}
 	
+	public String getDelFuDetail(Integer mstseq, Integer dtlseq) {
+		repoFuDetail.getDelFuDtl(mstseq, dtlseq);
+		return "Delete Successfully";
+	}
+	
 	/*public String DelFuDetailById(Integer mstseq, Integer dtlseq) {
 		repoFuDetail.deleteById(null);
 		return "Delete Successfully";

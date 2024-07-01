@@ -35,5 +35,11 @@ public class ControllerGlFuDetail {
 	
 	}
 	
+	@GetMapping("/GeneralLedger/deletefudtlsingle")
+	public String getDelFuDtl(Integer mstseq, Integer dtlseq) {
+		servFuDetail.getDelFuDetail(mstseq, dtlseq);
+		return "Delete Successfully";
+	}
+	
 
 }
