@@ -14,26 +14,29 @@ import org.springframework.web.bind.annotation.RestController;
 import org.yaml.snakeyaml.events.Event.ID;
 
 import com.GeneralLedger.Models.GlCcMaster;
-import com.GeneralLedger.Services.ServiceGlCcMaster;
+import com.GeneralLedger.Models.GlCcdDetail;
+import com.GeneralLedger.Services.ServiceGlCcdDetail;
 
 @RestController
-public class ControllerGlCcMaster {
+public class ControllerGlCcdDetail {
+	
 	@Autowired
-	ServiceGlCcMaster servGlCcMaster;
+	ServiceGlCcdDetail servGlCcdDtl;
 	
-	@GetMapping("/GeneralLedger/getglccmasterlist")
-	public List<GlCcMaster> getGlCcMasterList(){
-		return servGlCcMaster.getGlCcMasterList();
+	@GetMapping("/GeneralLedger/getglccdetaillist")
+	public List<GlCcdDetail> getGlCcdDetailList(){
+		return servGlCcdDtl.getGlCcdDetailList();
 	}
 	
-	@GetMapping("/GeneralLedger/getglccmastercu")
-	public List<GlCcMaster> getGlCcMasterCU(String glCcSts){
-		return servGlCcMaster.getGlCcMasterCU(glCcSts);
+	@GetMapping("/GeneralLedger/getglccdetailbycode")
+	public List<GlCcdDetail> getGlCcdDtlByCode(String ccdCode){
+		return servGlCcdDtl.getGlCcdDtlByCode(ccdCode);
 	}
 	
-	@PostMapping("/GeneralLedger/saveupdglccmaster")
-	public String saveUpdateGlCcMaster(@RequestBody GlCcMaster ccCode) {
-		return servGlCcMaster.saveUpdateGlCcMaster(ccCode);
+	@PostMapping("/GeneralLedger/saveupdglccdetail")
+	public String saveUpdateGlCcdDetail(@RequestBody GlCcdDetail ccdCs) {
+		return servGlCcdDtl.saveUpdateGlCcdDetail(ccdCs);
 	
-	}
+	}		
+	
 }

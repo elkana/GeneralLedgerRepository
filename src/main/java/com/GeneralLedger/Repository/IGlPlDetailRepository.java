@@ -1,18 +1,17 @@
 package com.GeneralLedger.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.GeneralLedger.Models.GlAlMaster;
+import com.GeneralLedger.Models.GlPlDetail;
 
 @Repository
-public interface IGlAlMasterRepository extends JpaRepository<GlAlMaster, String> {
+public interface IGlPlDetailRepository extends JpaRepository<GlPlDetail, String>{
 	
-	public List<GlAlMaster> findByGlAlCode(String alCode);
-	
-	public List<GlAlMaster> findByGlAlStatus (String alStatus);
+	public List<GlPlDetail> findByGlPlDtlStatus(String glPlDtlSts); 
 
 }

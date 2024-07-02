@@ -31,4 +31,7 @@ public class ServiceGlAlMaster {
 		return repoGlAlMaster.findByGlAlCode(alCode);
 	}
 
+	public List<GlAlMaster> getGlMasterSts(String alStatus){
+		return repoGlAlMaster.findByGlAlStatus(alStatus);
+	}
 }

@@ -13,28 +13,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yaml.snakeyaml.events.Event.ID;
 
-import com.GeneralLedger.Models.GlAlMaster;
-import com.GeneralLedger.Services.ServiceGlAlMaster;
-
+import com.GeneralLedger.Models.GlPlMaster;
+import com.GeneralLedger.Services.ServiceGlPlMaster;
 
 @RestController
-public class ControllerGlAlMaster {
+public class ControllerGlPlMaster {
+	
 	@Autowired
-	ServiceGlAlMaster servGlAlMaster;
+	ServiceGlPlMaster servGlPlMaster;
 	
-	@GetMapping("/GeneralLedger/getglalmasterlist")
-	public List<GlAlMaster> getGlAlMasterList(){
-		return servGlAlMaster.getGlAlMasterList();
+	@GetMapping("/GeneralLedger/getglplmasterlist")
+	public List<GlPlMaster> getGlPpMasterList(){
+		return servGlPlMaster.getGlPlMasterList();
 	}
 	
-	@GetMapping("/GeneralLedger/getglalmastercu")
-	public List<GlAlMaster> getGlMasterCU(String alCode){
-		return servGlAlMaster.getGlMasterCU(alCode);
+	@GetMapping("/GeneralLedger/getglplmastercu")
+	public List<GlPlMaster> getGlPlMasterCU(String glPlSts){
+		return servGlPlMaster.getGlPlMasterCU(glPlSts);
 	}
 	
-	@GetMapping("/GeneralLedger/getglalmasterstslist")
-	public List<GlAlMaster> getGlAlMasterStatus(String alStatus){
-		return servGlAlMaster.getGlMasterSts(alStatus);
+	@PostMapping("/GeneralLedger/saveupdglplmaster")
+	public String saveUpdateGlPlMaster(@RequestBody GlPlMaster plCode) {
+		return servGlPlMaster.saveUpdateGlPlMaster(plCode);
+	
 	}
 
 }

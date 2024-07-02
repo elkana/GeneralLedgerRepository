@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Entity
 @Table(name= "GL_AL_DET")
+@IdClass(GlAlDetailCompKey.class)
 
 public class GlAlDetail {
 	
@@ -25,6 +27,7 @@ public class GlAlDetail {
 	@Column (name="AL_CODE", length=20, nullable = false)
 	private String glAlCodeMstDet;
 	
+	@Id
 	@Column (name="ALD_SEQ", nullable = false)
 	private BigDecimal glAldSeqDet;
 	
