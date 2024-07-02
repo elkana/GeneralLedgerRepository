@@ -28,5 +28,10 @@ public class ServiceGlPjDetail {
 		repoPjDetail.save(pjdetail);
 		return "Submit Successfully";
 	}
+	
+	public String getDelPjDetail(String code, Integer seq) {
+		repoPjDetail.getDelPjDtl(code, seq);
+		return "Delete Successfully";
+	}
 
 }

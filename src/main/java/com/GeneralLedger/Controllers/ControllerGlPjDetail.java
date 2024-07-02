@@ -35,5 +35,11 @@ public class ControllerGlPjDetail {
 		return servPjDetail.saveUpdatePjDetail(pjdetail);
 	
 	}
+	
+	@GetMapping("/GeneralLedger/deletepjdtlsingle")
+	public String getDelPjDtl(String code, Integer seq) {
+		servPjDetail.getDelPjDetail(code, seq);
+		return "Delete Successfully";
+	}
 
 }
