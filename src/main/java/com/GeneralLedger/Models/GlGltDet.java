@@ -34,11 +34,11 @@ public class GlGltDet {
 	private String glGltDtlAdCode;
 	
 	@Column(name="GL_DATE")
-	 @JsonFormat(pattern = "dd/MM/yy")
+	 @JsonFormat(pattern = "dd/MM/yyyy")
 	private Date glGltDtlGlDate;
 	
 	@Column(name="GL_EFF_DATE")
-	 @JsonFormat(pattern = "dd/MM/yy")
+	 @JsonFormat(pattern = "dd/MM/yyyy")
 	private Date glGltDtlEffDate;
 	
 	@Column(name="GL_DOC_NO",length=20)
@@ -123,14 +123,14 @@ public class GlGltDet {
 	 private String glGltDtlUserCrea;
 	 
 	 @Column(name="AC_DATE_CRE")
-	 @JsonFormat(pattern = "dd/MM/yy")
+	 @JsonFormat(pattern = "dd/MM/yyyy")
 	 private Date glGltDtlDateCrea;
 	 
 	 @Column(name="AC_USER_UPD",length=20)
 	 private String glGltDtlUserUpd;
 	 
 	 @Column(name="AC_DATE_UPD")
-	 @JsonFormat(pattern = "dd/MM/yy")
+	 @JsonFormat(pattern = "dd/MM/yyyy")
 	 private Date glGltDtlDateUpd;
 
 

@@ -35,6 +35,12 @@ public class VGlTransMaster {
 	@Column(name="VGTM_CURR",length=10)
 	private String vgtmCurr;
 	
+	@Column(name="VGTM_AL_CODE",length=20)
+	private String vgtmAlCode;
+	
+	@Column(name="VGTM_REF_JOURNAL",length=20)
+	private String vgtmRefJournal;
+	
 	@Column(name="VGTM_AMT_CREDIT")
 	private BigDecimal vgtmAmtCredit;
 	
