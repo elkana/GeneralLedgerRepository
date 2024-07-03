@@ -19,6 +19,10 @@ public class ServiceGlSacMaster {
 		return repoSacMst.findAll();
 	}
 	
+	public List<GlSacMaster> getGlSacSts(String status){
+		return repoSacMst.findByglsmacstatus(status);
+	}
+	
 	public Optional<GlSacMaster> getSacCode(String acc){
 	    return repoSacMst.findByglsmsacacc(acc);
 	}

@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class GlSacMaster {
 	
 	@Id
-	@Column(name="SAC_CODE",length=20,  nullable = false)
+	@Column(name="SAC_ACC",length=20,  nullable = false)
 	private String glsmsacacc;
 	
 	@Column(name="SAC_SUB",length=20)
@@ -42,7 +42,5 @@ public class GlSacMaster {
 	@Column(name="AC_DATE_UPD")
 	private Date glsmacdateupd;
 	
-	@Column(name="ASC_STATUS",length=2)
-	private String glsmascstatus;
 
 }

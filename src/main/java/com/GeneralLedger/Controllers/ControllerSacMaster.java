@@ -24,6 +24,11 @@ public class ControllerSacMaster {
 		return servSacMst.getGlSacMaster();
 	}
 	
+	@GetMapping("/GeneralLedger/getglsacstslist")
+	public List<GlSacMaster> getGlSacSts(String status){
+		return servSacMst.getGlSacSts(status);
+	}
+	
 	@GetMapping("/GeneralLedger/getsacaccsingle")
 	public Optional<GlSacMaster> getSacCode(String acc) {
 		return servSacMst.getSacCode(acc);
