@@ -30,8 +30,8 @@ public class ControllerSacMaster {
 	}
 	
 	@GetMapping("/GeneralLedger/getsacaccsingle")
-	public Optional<GlSacMaster> getSacCode(String acc) {
-		return servSacMst.getSacCode(acc);
+	public Optional<GlSacMaster> getSacCode(String acc,String subacc) {
+		return servSacMst.getSacCode(acc, subacc);
 	}
 	
 	@PostMapping("/GeneralLedger/saveupdsacmster")

@@ -23,9 +23,19 @@ public class ControllerGlAcMaster {
 		return servAcMst.getGlAcMaster();
 	}
 	
+	@GetMapping("/GeneralLedger/getglacstatuslist")
+	public List<GlAcMaster> getGlAcStatus(String status){
+		return servAcMst.getGlAcStatus(status);
+	}
+	
 	@GetMapping("/GeneralLedger/getaccodesingle")
 	public Optional<GlAcMaster> getAcCode(String code) {
 		return servAcMst.getAcCode(code);
+	}
+	
+	@GetMapping("/GeneralLedger/getmstaccdesc")
+	public String getAccDesc(String code) {
+		return servAcMst.getAccDesc(code);
 	}
 	
 	@PostMapping("/GeneralLedger/saveupdacmster")

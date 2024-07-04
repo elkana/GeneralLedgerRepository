@@ -40,6 +40,11 @@ public class ControllerGlTypeMaster {
 		return servTypeMst.getTypeCode(code);
 	}
 	
+	@GetMapping("/GeneralLedger/getmstypedesc")
+	public String getMstTypeDesc(String code) {
+		return servTypeMst.getMstTypeDesc(code);
+	}
+	
 	@GetMapping("/GeneralLedger/deletedTypemaster")
 	public String DelTypeMaster(String code){
 		servTypeMst.DelTypeMaster(code);

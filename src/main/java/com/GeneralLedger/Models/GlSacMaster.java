@@ -5,6 +5,7 @@ import java.util.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,12 +16,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "GL_SAC_MSTR")
+@IdClass(GlSacMasterCompKey.class)
 public class GlSacMaster {
 	
 	@Id
 	@Column(name="SAC_ACC",length=20,  nullable = false)
 	private String glsmsacacc;
 	
+	@Id
 	@Column(name="SAC_SUB",length=20)
 	private String glsmsacsub;
 	

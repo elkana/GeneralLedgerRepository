@@ -23,8 +23,8 @@ public class ServiceGlSacMaster {
 		return repoSacMst.findByglsmacstatus(status);
 	}
 	
-	public Optional<GlSacMaster> getSacCode(String acc){
-	    return repoSacMst.findByglsmsacacc(acc);
+	public Optional<GlSacMaster> getSacCode(String acc,String subacc){
+	    return repoSacMst.findByglsmsacaccAndGlsmsacsub(acc, subacc);
 	}
 	
 	public String saveUpdateSacMaster(GlSacMaster sacmaster) {

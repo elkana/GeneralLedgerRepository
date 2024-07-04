@@ -32,6 +32,10 @@ public class ServiceGlTypeMaster {
 	    return repoTypeMst.findBygltmtypecode(code);
 	}
 	
+	public String getMstTypeDesc(String code) {
+		return repoTypeMst.getMstTypeDesc(code);
+	}
+	
 	public String DelTypeMaster(String code) {
 		repoTypeMst.getDelByTypeCode(code);
 		return "Delete Successfully";
