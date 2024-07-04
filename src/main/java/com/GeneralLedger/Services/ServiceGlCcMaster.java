@@ -27,5 +27,9 @@ public class ServiceGlCcMaster {
 		repoGlCcMaster.save(ccCode);
 		return "Submit Successfully";
 	}
+	
+	public String getGlCcMstDesc(String glCcCode) {
+		return repoGlCcMaster.getGlCcMstDesc(glCcCode);
+	}
 
 }

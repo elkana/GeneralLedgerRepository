@@ -36,4 +36,9 @@ public class ControllerGlCcMaster {
 		return servGlCcMaster.saveUpdateGlCcMaster(ccCode);
 	
 	}
+	
+	@GetMapping("/GeneralLedger/getglccmstdesc")
+	public String getGlCcMstDesc(String glCcCode) {
+		return servGlCcMaster.getGlCcMstDesc(glCcCode);
+	}
 }

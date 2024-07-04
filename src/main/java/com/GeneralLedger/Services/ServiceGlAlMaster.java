@@ -34,4 +34,8 @@ public class ServiceGlAlMaster {
 	public List<GlAlMaster> getGlMasterSts(String alStatus){
 		return repoGlAlMaster.findByGlAlStatus(alStatus);
 	}
+	
+	public String getGlAlMstDesc(String glAlCode) {
+		return repoGlAlMaster.getGlAlMstDesc(glAlCode);
+	}
 }

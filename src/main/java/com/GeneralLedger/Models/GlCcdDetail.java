@@ -39,7 +39,7 @@ public class GlCcdDetail {
 	@JsonFormat(pattern = "dd/MM/yy")
 	private String glCcDtlEnd;
 	
-	@Column(name="PJD_STATUS", length=2)
+	@Column(name="CCD_STATUS", length=2)
 	private String glCcDtlStatus;
 	
 	 @Column(name="AC_USER_CRE", length=15)

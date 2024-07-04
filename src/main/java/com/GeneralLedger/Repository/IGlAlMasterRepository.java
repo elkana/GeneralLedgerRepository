@@ -14,5 +14,8 @@ public interface IGlAlMasterRepository extends JpaRepository<GlAlMaster, String>
 	public List<GlAlMaster> findByGlAlCode(String alCode);
 	
 	public List<GlAlMaster> findByGlAlStatus (String alStatus);
+	
+	@Query("select s.glAlDesc from GlAlMaster s where s.glAlCode=?1")
+	public String getGlAlMstDesc(String glAlCode);
 
 }

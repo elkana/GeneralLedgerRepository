@@ -36,5 +36,10 @@ public class ControllerGlAlMaster {
 	public List<GlAlMaster> getGlAlMasterStatus(String alStatus){
 		return servGlAlMaster.getGlMasterSts(alStatus);
 	}
+	
+	@GetMapping("/GeneralLedger/getglalmstdesc")
+	public String getGlAlMstDesc(String glAlCode) {
+		return servGlAlMaster.getGlAlMstDesc(glAlCode);
+	}
 
 }
