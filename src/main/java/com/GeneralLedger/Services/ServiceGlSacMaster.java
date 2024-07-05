@@ -27,6 +27,10 @@ public class ServiceGlSacMaster {
 	    return repoSacMst.findByglsmsacaccAndGlsmsacsub(acc, subacc);
 	}
 	
+	public String getAccSubDesc(String code) {
+		return repoSacMst.getMstAccSubDesc(code);
+	}
+	
 	public String saveUpdateSacMaster(GlSacMaster sacmaster) {
 		repoSacMst.save(sacmaster);
 		return "Submit Successfully";

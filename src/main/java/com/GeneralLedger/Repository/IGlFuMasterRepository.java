@@ -15,5 +15,8 @@ public interface IGlFuMasterRepository extends JpaRepository<GlFuMaster, Integer
 	List<GlFuMaster> findByglFuStatusAndGlFuSeq(String status,Integer Seqno);
 	
 	Optional<GlFuMaster> findByglFuSeq(Integer seq);
+	
+	@Query("select s.glFuDesc from GlFuMaster s where s.glFuCode=?1")
+	public String getMstFuDesc(String code);
 
 }

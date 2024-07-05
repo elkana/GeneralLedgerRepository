@@ -40,6 +40,11 @@ public class ControllerGlPjMaster {
 		return servPjMaster.getPjCode(code);
 	}
 	
+	@GetMapping("/GeneralLedger/getmstpjdesc")
+	public String getMstPjDesc(String code) {
+		return servPjMaster.getMstPjDesc(code);
+	}
+	
 	@DeleteMapping("/GeneralLedger/deletebyglpjcode")
 	public String DelPjMaster(String code) {
 		return servPjMaster.DelPjMasterByPjCode(code);

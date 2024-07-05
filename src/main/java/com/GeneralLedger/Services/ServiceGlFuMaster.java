@@ -33,6 +33,10 @@ public class ServiceGlFuMaster {
 	    return repoFuMaster.findByglFuSeq(seq);
 	}
 	
+	public String getMstFuDesc(String code) {
+		return repoFuMaster.getMstFuDesc(code);
+	}
+	
 	public String DelFuMasterById(Integer Seq) {
 		repoFuMaster.deleteById(Seq);
 		return "Delete Successfully";

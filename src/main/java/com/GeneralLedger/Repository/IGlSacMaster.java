@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.GeneralLedger.Models.GlSacMaster;
@@ -16,5 +17,8 @@ public interface IGlSacMaster extends JpaRepository<GlSacMaster, GlSacMasterComp
 	Optional<GlSacMaster> findByglsmsacaccAndGlsmsacsub(String acc,String subacc);
 	
 	List<GlSacMaster> findByglsmacstatus(String status);
+	
+	@Query("select s.glsmascdesc from GlSacMaster s where s.glsmsacsub=?1")
+	public String getMstAccSubDesc(String code);
 
 }

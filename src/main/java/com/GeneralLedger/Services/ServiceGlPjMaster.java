@@ -33,6 +33,10 @@ public class ServiceGlPjMaster {
 	    return repoPjMaster.findByglPjCode(code);
 	}
 	
+	public String getMstPjDesc(String code) {
+		return repoPjMaster.getMstPjDesc(code);
+	}
+	
 	public String DelPjMasterByPjCode(String code) {
 		repoPjMaster.deleteById(code);;
 		return "Delete Successfully";

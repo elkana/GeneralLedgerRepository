@@ -34,6 +34,11 @@ public class ControllerSacMaster {
 		return servSacMst.getSacCode(acc, subacc);
 	}
 	
+	@GetMapping("/GeneralLedger/getmstaccsubdesc")
+	public String getAccSubDesc(String code) {
+		return servSacMst.getAccSubDesc(code);
+	}
+	
 	@PostMapping("/GeneralLedger/saveupdsacmster")
 	public String saveUpdateSac(@RequestBody GlSacMaster sacmaster) {
 		return servSacMst.saveUpdateSacMaster(sacmaster) ;

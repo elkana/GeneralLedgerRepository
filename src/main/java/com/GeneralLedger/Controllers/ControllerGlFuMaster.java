@@ -40,6 +40,11 @@ public class ControllerGlFuMaster {
 		return servFuMaster.getFuSeqNo(seq);
 	}
 	
+	@GetMapping("/GeneralLedger/getmstfudesc")
+	public String getMstFuDesc(String code) {
+		return servFuMaster.getMstFuDesc(code);
+	}
+	
 	@DeleteMapping("/GeneralLedger/deletebyseqno")
 	public String DelFuMaster(Integer seqno) {
 		return servFuMaster.DelFuMasterById(seqno);
