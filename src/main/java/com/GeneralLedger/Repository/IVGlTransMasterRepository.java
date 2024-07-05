@@ -16,5 +16,7 @@ public interface IVGlTransMasterRepository extends JpaRepository<VGlTransMaster,
 	
 	public Optional<VGlTransMaster> findByVgtmRef(String reffNo);
 	
+	public List<VGlTransMaster> findByvgtmRef(String refno);
+	
 
 }

@@ -24,5 +24,9 @@ public class ServiceVGlTransMaster {
 		return repoVgtm.findByVgtmRef(reffNo);
 	}
 	
+	public List<VGlTransMaster> getRefNoList(String refno){
+		return repoVgtm.findByvgtmRef(refno);
+	}
+	
 	
 }

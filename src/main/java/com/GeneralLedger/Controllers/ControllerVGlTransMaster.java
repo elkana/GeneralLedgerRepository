@@ -31,5 +31,10 @@ public class ControllerVGlTransMaster {
 	public Optional<VGlTransMaster> GgtVTransCU(String reffNo){
 		return servVgtm.GgtVTransCU(reffNo);
 	}
+	
+	@GetMapping("/vgtm/getRefNoList")
+	public List<VGlTransMaster> getRefNoList(String refno){
+		return servVgtm.getRefNoList(refno);
+	}
 
 }
