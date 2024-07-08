@@ -1,5 +1,6 @@
 package com.GeneralLedger.Controllers;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,6 +36,11 @@ public class ControllerVGlTransMaster {
 	@GetMapping("/vgtm/getRefNoList")
 	public List<VGlTransMaster> getRefNoList(String refno){
 		return servVgtm.getRefNoList(refno);
+	}
+	
+	@GetMapping("/vgtm/getbydateList")
+	public List<VGlTransMaster> getByDateist(String dt){
+		return servVgtm.getByDateList(dt);
 	}
 
 }

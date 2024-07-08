@@ -1,5 +1,6 @@
 package com.GeneralLedger.Repository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,9 @@ public interface IVGlTransMasterRepository extends JpaRepository<VGlTransMaster,
 	public Optional<VGlTransMaster> findByVgtmRef(String reffNo);
 	
 	public List<VGlTransMaster> findByvgtmRef(String refno);
+	
+	@Query(value="SELECT * FROM V_GL_TRANS_MASTER s WHERE TO_CHAR(VGTM_GL_DATE,'DD/MM/YYYY')=:dt", nativeQuery = true )
+	public List<VGlTransMaster> getbydateList (String dt);
 	
 
 }

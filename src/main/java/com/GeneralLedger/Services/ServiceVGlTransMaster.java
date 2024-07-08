@@ -1,5 +1,6 @@
 package com.GeneralLedger.Services;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,10 @@ public class ServiceVGlTransMaster {
 	
 	public List<VGlTransMaster> getRefNoList(String refno){
 		return repoVgtm.findByvgtmRef(refno);
+	}
+	
+	public List<VGlTransMaster> getByDateList(String dt){
+		return repoVgtm.getbydateList(dt);
 	}
 	
 	
