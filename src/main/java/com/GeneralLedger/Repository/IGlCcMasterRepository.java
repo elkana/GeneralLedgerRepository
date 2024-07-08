@@ -11,6 +11,8 @@ import com.GeneralLedger.Models.GlCcMaster;
 @Repository
 public interface IGlCcMasterRepository extends JpaRepository<GlCcMaster, String>{
 	
+	public List<GlCcMaster> findByGlCcCode(String ccCode);
+	
 	public List<GlCcMaster> findByGlCcStatus(String glCcSts);
 	
 	@Query("select s.glCcDesc from GlCcMaster s where s.glCcCode=?1")

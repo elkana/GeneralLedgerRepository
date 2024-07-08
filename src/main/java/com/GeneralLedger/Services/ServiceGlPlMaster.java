@@ -19,13 +19,21 @@ public class ServiceGlPlMaster {
 		return repoGlPlMaster.findAll();
 	}
 	
-	public List<GlPlMaster> getGlPlMasterCU(String glPlSts){
+	public List<GlPlMaster> getGlPlMasterCU(String plCode){
+		return repoGlPlMaster.findByGlPlCode(plCode);
+	}
+	
+	public List<GlPlMaster> getGlPlMasterSts(String glPlSts){
 		return repoGlPlMaster.findByGlPlStatus(glPlSts);
 	}
 	
 	public String saveUpdateGlPlMaster(GlPlMaster plCode) {
 		repoGlPlMaster.save(plCode);
 		return "Submit Successfully";
+	}
+	
+	public String getGlPlMstDesc(String glPlCode) {
+		return repoGlPlMaster.getGlPlMstDesc(glPlCode);
 	}
 
 }

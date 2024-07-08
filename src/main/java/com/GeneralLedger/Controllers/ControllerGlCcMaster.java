@@ -27,14 +27,19 @@ public class ControllerGlCcMaster {
 	}
 	
 	@GetMapping("/GeneralLedger/getglccmastercu")
-	public List<GlCcMaster> getGlCcMasterCU(String glCcSts){
-		return servGlCcMaster.getGlCcMasterCU(glCcSts);
+	public List<GlCcMaster> getGlCcMasterCU(String ccCode){
+		return servGlCcMaster.getGlCcMasterCU(ccCode);
 	}
 	
 	@PostMapping("/GeneralLedger/saveupdglccmaster")
 	public String saveUpdateGlCcMaster(@RequestBody GlCcMaster ccCode) {
 		return servGlCcMaster.saveUpdateGlCcMaster(ccCode);
 	
+	}
+	
+	@GetMapping("/GeneralLedger/getglccmasterstslist")
+	public List<GlCcMaster> getGlCcMasterStatus(String glCcSts){
+		return servGlCcMaster.getGlCcMasterSts(glCcSts);
 	}
 	
 	@GetMapping("/GeneralLedger/getglccmstdesc")

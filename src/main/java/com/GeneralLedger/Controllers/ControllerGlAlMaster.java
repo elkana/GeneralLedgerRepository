@@ -29,12 +29,18 @@ public class ControllerGlAlMaster {
 	
 	@GetMapping("/GeneralLedger/getglalmastercu")
 	public List<GlAlMaster> getGlMasterCU(String alCode){
-		return servGlAlMaster.getGlMasterCU(alCode);
+		return servGlAlMaster.getGlAlMasterCU(alCode);
+	}
+	
+	@PostMapping("/GeneralLedger/saveupdglalmaster")
+	public String saveUpdateGlAlMaster(@RequestBody GlAlMaster alCode) {
+		return servGlAlMaster.saveUpdateGlAlMaster(alCode);
+	
 	}
 	
 	@GetMapping("/GeneralLedger/getglalmasterstslist")
 	public List<GlAlMaster> getGlAlMasterStatus(String alStatus){
-		return servGlAlMaster.getGlMasterSts(alStatus);
+		return servGlAlMaster.getGlAlMasterSts(alStatus);
 	}
 	
 	@GetMapping("/GeneralLedger/getglalmstdesc")

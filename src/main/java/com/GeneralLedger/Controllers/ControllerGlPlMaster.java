@@ -17,8 +17,7 @@ import com.GeneralLedger.Models.GlPlMaster;
 import com.GeneralLedger.Services.ServiceGlPlMaster;
 
 @RestController
-public class ControllerGlPlMaster {
-	
+public class ControllerGlPlMaster {	
 	@Autowired
 	ServiceGlPlMaster servGlPlMaster;
 	
@@ -28,14 +27,24 @@ public class ControllerGlPlMaster {
 	}
 	
 	@GetMapping("/GeneralLedger/getglplmastercu")
-	public List<GlPlMaster> getGlPlMasterCU(String glPlSts){
-		return servGlPlMaster.getGlPlMasterCU(glPlSts);
+	public List<GlPlMaster> getGlPlMasterCU(String plCode){
+		return servGlPlMaster.getGlPlMasterCU(plCode);
 	}
 	
 	@PostMapping("/GeneralLedger/saveupdglplmaster")
 	public String saveUpdateGlPlMaster(@RequestBody GlPlMaster plCode) {
 		return servGlPlMaster.saveUpdateGlPlMaster(plCode);
 	
+	}
+	
+	@GetMapping("/GeneralLedger/getglplmasterstslist")
+	public List<GlPlMaster> getGlPlMasterStatus(String glPlSts){
+		return servGlPlMaster.getGlPlMasterSts(glPlSts);
+	}
+	
+	@GetMapping("/GeneralLedger/getglplmstdesc")
+	public String getGlPlMstDesc(String glPlCode) {
+		return servGlPlMaster.getGlPlMstDesc(glPlCode);
 	}
 
 }

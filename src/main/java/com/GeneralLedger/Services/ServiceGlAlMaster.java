@@ -27,12 +27,17 @@ public class ServiceGlAlMaster {
 		return repoGlAlMaster.findAll();
 	}
 	
-	public List<GlAlMaster> getGlMasterCU(String alCode){
+	public List<GlAlMaster> getGlAlMasterCU(String alCode){
 		return repoGlAlMaster.findByGlAlCode(alCode);
 	}
 
-	public List<GlAlMaster> getGlMasterSts(String alStatus){
+	public List<GlAlMaster> getGlAlMasterSts(String alStatus){
 		return repoGlAlMaster.findByGlAlStatus(alStatus);
+	}
+	
+	public String saveUpdateGlAlMaster(GlAlMaster alCode) {
+		repoGlAlMaster.save(alCode);
+		return "Submit Successfully";
 	}
 	
 	public String getGlAlMstDesc(String glAlCode) {

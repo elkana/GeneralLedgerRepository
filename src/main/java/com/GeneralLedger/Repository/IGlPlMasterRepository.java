@@ -12,6 +12,11 @@ import com.GeneralLedger.Models.GlPlMaster;
 @Repository
 public interface IGlPlMasterRepository extends JpaRepository<GlPlMaster, String>{
 	
+	public List<GlPlMaster> findByGlPlCode(String plCode);
+	
 	public List<GlPlMaster> findByGlPlStatus(String glPlSts); 
+	
+	@Query("select s.glPlDesc from GlPlMaster s where s.glPlCode=?1")
+	public String getGlPlMstDesc(String glPlCode);
 
 }
