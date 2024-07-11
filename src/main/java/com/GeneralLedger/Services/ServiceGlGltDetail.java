@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.GeneralLedger.Models.GlGltDet;
 import com.GeneralLedger.Models.GlTypeMaster;
+import java.util.Date;
 import com.GeneralLedger.Repository.IGlGltDtailRepository;
 
 
@@ -20,6 +21,10 @@ public class ServiceGlGltDetail {
 		return repoGltDtl.findByGlGltDtlRef(reffNo);
 	}
 	
+	public Optional<GlGltDet> getJournalCU(String reffNo, Integer seqno){
+		return repoGltDtl.findByGlGltDtlRefAndGlDltDtlSeqNo(reffNo, seqno);
+	}
+	
 	
 	public String saveUpdateJournal(GlGltDet glt) {
 		repoGltDtl.save(glt);
@@ -27,7 +32,13 @@ public class ServiceGlGltDetail {
 	}
 	
 	public String execPostJuournal(String p_reffno, String msg) {
-		return repoGltDtl.runPostJournal(p_reffno, msg);
-		
+		return repoGltDtl.runPostJournal(p_reffno, msg);		
+	}
+	
+	public String execUpdateJournal(String p_reffno, String p_date , String p_effdate ,
+			String p_docno, String p_doctype, String p_curr, String p_reffjournal, 
+				String p_alcode, String outmsg) {
+		return repoGltDtl.runUpdateJournal(p_reffno, p_date ,p_effdate ,
+				p_docno, p_doctype, p_curr, p_reffjournal,  p_alcode,  outmsg);		
 	}
 }

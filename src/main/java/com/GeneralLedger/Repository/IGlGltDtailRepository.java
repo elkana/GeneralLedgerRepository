@@ -1,6 +1,7 @@
 package com.GeneralLedger.Repository;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,14 +11,22 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.GeneralLedger.Models.GlGltDet;
+import com.GeneralLedger.Models.GlGltDetailCompkey;
 
 
 @Repository
-public interface IGlGltDtailRepository extends JpaRepository<GlGltDet,String> {
+public interface IGlGltDtailRepository extends JpaRepository<GlGltDet,GlGltDetailCompkey> {
 
 		public List<GlGltDet> findByGlGltDtlRef(String reffno);
 		
+		public Optional<GlGltDet> findByGlGltDtlRefAndGlDltDtlSeqNo(String reffno, Integer seqno);
+		
 		@Procedure(procedureName = "P_POST_JOURNAL")
 		public String runPostJournal(String p_reffno, String msg);	
+		
+		@Procedure(procedureName = "P_UPDATE_JOURNAL")
+		public String runUpdateJournal(String p_reffno, String p_date , String p_effdate , 
+				String p_docno, String p_doctype, String p_curr, String p_reffjournal, 
+				String p_alcode, String outmsg);
 }
 
