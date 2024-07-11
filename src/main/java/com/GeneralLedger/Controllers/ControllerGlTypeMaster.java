@@ -34,6 +34,16 @@ public class ControllerGlTypeMaster {
 		return servTypeMst.getGlTypeByCode(code);
 	}
 	
+	@GetMapping("/GeneralLedger/getgltypecodestslist")
+	public List<GlTypeMaster> getGlCodeTypeSts(String status, String code){
+		return servTypeMst.getGlTypeByCodeSts(status, code);
+	}
+	
+	@GetMapping("/GeneralLedger/getgltypedescstslist")
+	public List<GlTypeMaster> getGlDescTypeSts(String status,String desc){
+		return servTypeMst.getGlDescTypeSts(status, desc);
+	}
+	
 	@GetMapping("/GeneralLedger/getgltypedesclist")
 	public List<GlTypeMaster> getGlDescType(String desc){
 		return servTypeMst.getGlDescType(desc);

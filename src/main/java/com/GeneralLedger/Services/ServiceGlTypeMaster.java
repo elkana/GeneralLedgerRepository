@@ -27,8 +27,16 @@ public class ServiceGlTypeMaster {
 		return repoTypeMst.findBygltmtypecodeContaining(code);
 	}
 	
+	public List<GlTypeMaster> getGlTypeByCodeSts(String status ,String code){
+		return repoTypeMst.findBygltmacstatusAndGltmtypecodeContaining(status, code);
+	}
+	
 	public List<GlTypeMaster> getGlDescType(String desc){
 		return repoTypeMst.findByGltmtypedescContaining(desc);
+	}
+	
+	public List<GlTypeMaster> getGlDescTypeSts(String status ,String desc){
+		return repoTypeMst.findBygltmacstatusAndGltmtypedescContaining(status, desc);
 	}
 	
 	public String saveUpdateTypeMaster(GlTypeMaster type) {

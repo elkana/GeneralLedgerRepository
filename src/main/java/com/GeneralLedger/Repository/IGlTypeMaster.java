@@ -22,6 +22,10 @@ public interface IGlTypeMaster extends JpaRepository<GlTypeMaster, String>{
 	List<GlTypeMaster> findBygltmtypecodeContaining(String code);
 	
 	List<GlTypeMaster> findByGltmtypedescContaining(String desc);
+	
+	List<GlTypeMaster> findBygltmacstatusAndGltmtypecodeContaining(String status, String code);
+	
+	List<GlTypeMaster> findBygltmacstatusAndGltmtypedescContaining(String status ,String desc);
     
 	@Query("select s.gltmtypedesc from GlTypeMaster s where s.gltmtypecode=?1")
 	public String getMstTypeDesc(String code);

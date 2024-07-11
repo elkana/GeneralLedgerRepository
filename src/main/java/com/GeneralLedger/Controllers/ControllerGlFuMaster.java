@@ -29,6 +29,21 @@ public class ControllerGlFuMaster {
 		return servFuMaster.getGlFuStatus(status, Seqno);
 	}
 	
+	@GetMapping("/GeneralLedger/getglfubycodelist")
+	public List<GlFuMaster> getCodeFu(String code){
+		return servFuMaster.getGlCodeFu(code);
+	}
+	
+	@GetMapping("/GeneralLedger/getglfubydesclist")
+	public List<GlFuMaster> getDescFu(String desc){
+		return servFuMaster.getGlDescFu(desc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglfubystslist")
+	public List<GlFuMaster> getStatusFu(String status){
+		return servFuMaster.getGlStsFu(status);
+	}
+	
 	@PostMapping("/GeneralLedger/saveupdfumaster")
 	public String saveUpdateFuMaster(@RequestBody GlFuMaster fumaster) {
 		return servFuMaster.saveUpdateFuMaster(fumaster);

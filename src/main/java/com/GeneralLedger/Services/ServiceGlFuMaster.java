@@ -24,6 +24,18 @@ public class ServiceGlFuMaster {
 		return repoFuMaster.findByglFuStatusAndGlFuSeq(status, Seqno);
 	}
 	
+	public List<GlFuMaster> getGlCodeFu(String code){
+		return repoFuMaster.findByglFuCodeContaining(code);
+	}
+	
+	public List<GlFuMaster> getGlDescFu(String desc){
+		return repoFuMaster.findByglFuDescContaining(desc);
+	}
+	
+	public List<GlFuMaster> getGlStsFu(String status){
+		return repoFuMaster.findByglFuStatus(status);
+	}
+	
 	public String saveUpdateFuMaster(GlFuMaster fumaster) {
 		repoFuMaster.save(fumaster);
 		return "Submit Successfully";
