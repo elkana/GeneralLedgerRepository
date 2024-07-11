@@ -29,6 +29,16 @@ public class ControllerGlTypeMaster {
 		return servTypeMst.getGlStsType(status);
 	}
 	
+	@GetMapping("/GeneralLedger/getgltypecodelist")
+	public List<GlTypeMaster> getGlCodeType(String code){
+		return servTypeMst.getGlTypeByCode(code);
+	}
+	
+	@GetMapping("/GeneralLedger/getgltypedesclist")
+	public List<GlTypeMaster> getGlDescType(String desc){
+		return servTypeMst.getGlDescType(desc);
+	}
+	
 	@PostMapping("/GeneralLedger/saveupdtypemst")
 	public String saveUpdateTypeMaster(@RequestBody GlTypeMaster type) {
 		return servTypeMst.saveUpdateTypeMaster(type);

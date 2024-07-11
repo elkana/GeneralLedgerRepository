@@ -23,6 +23,14 @@ public class ServiceGlTypeMaster {
 		return repoTypeMst.findBygltmacstatus(status);
 	}
 	
+	public List<GlTypeMaster> getGlTypeByCode(String code){
+		return repoTypeMst.findBygltmtypecodeContaining(code);
+	}
+	
+	public List<GlTypeMaster> getGlDescType(String desc){
+		return repoTypeMst.findByGltmtypedescContaining(desc);
+	}
+	
 	public String saveUpdateTypeMaster(GlTypeMaster type) {
 		repoTypeMst.save(type);
 		return "Submit Successfully";
