@@ -23,6 +23,30 @@ public class ServiceGlSacMaster {
 		return repoSacMst.findByglsmacstatus(status);
 	}
 	
+	public List<GlSacMaster> getGlSacByAcc(String acc){
+		return repoSacMst.findByglsmsacaccContaining(acc);
+	}
+	
+	public List<GlSacMaster> getGlSacByStsAcc(String status, String acc){
+		return repoSacMst.findByglsmacstatusAndGlsmsacaccContaining(status, acc);
+	}
+	
+	public List<GlSacMaster> getGlSacBySubAcc(String subacc){
+		return repoSacMst.findByglsmsacsubContaining(subacc);
+	}
+	
+	public List<GlSacMaster> getGlSacByStsSubAcc(String status, String subacc){
+		return repoSacMst.findByglsmacstatusAndGlsmsacsubContaining(status, subacc);
+	}
+	
+	public List<GlSacMaster> getGlSacByDesc(String desc){
+		return repoSacMst.findByglsmascdescContaining(desc);
+	}
+	
+	public List<GlSacMaster> getGlSacByStsDesc(String status, String desc){
+		return repoSacMst.findByglsmacstatusAndGlsmascdescContaining(status, desc);
+	}
+	
 	public Optional<GlSacMaster> getSacCode(String acc,String subacc){
 	    return repoSacMst.findByglsmsacaccAndGlsmsacsub(acc, subacc);
 	}
