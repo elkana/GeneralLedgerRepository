@@ -50,4 +50,9 @@ public class ControllerGlGltDetail {
 		return servGltDtl.saveUpdateJournal(glt);	
 	}
 	
+	@GetMapping("/journal/deletejournal")
+	public String DeleteData (String reff, Integer seq) {
+		return servGltDtl.DeleteData(reff, seq);
+	}
+	
 }

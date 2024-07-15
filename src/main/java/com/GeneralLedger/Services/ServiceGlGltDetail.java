@@ -35,10 +35,20 @@ public class ServiceGlGltDetail {
 		return repoGltDtl.runPostJournal(p_reffno, msg);		
 	}
 	
+	public String DeleteData (String reff, Integer seq) {
+		repoGltDtl.deleteReffNo(reff, seq);
+		return "Delete Successfully";
+	}
+	
 	public String execUpdateJournal(String p_reffno, String p_date , String p_effdate ,
 			String p_docno, String p_doctype, String p_curr, String p_reffjournal, 
 				String p_alcode, String outmsg) {
 		return repoGltDtl.runUpdateJournal(p_reffno, p_date ,p_effdate ,
 				p_docno, p_doctype, p_curr, p_reffjournal,  p_alcode,  outmsg);		
+	}
+	
+	public String getDeleteDetail(String reffno, Integer seqno) {
+		repoGltDtl.deleteById(null);
+		return "Delete Journal Successfully";
 	}
 }

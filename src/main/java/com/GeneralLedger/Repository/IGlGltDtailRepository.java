@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
@@ -28,5 +29,9 @@ public interface IGlGltDtailRepository extends JpaRepository<GlGltDet,GlGltDetai
 		public String runUpdateJournal(String p_reffno, String p_date , String p_effdate , 
 				String p_docno, String p_doctype, String p_curr, String p_reffjournal, 
 				String p_alcode, String outmsg);
+	    
+		 @Modifying
+		 @Query("DELETE FROM GlGltDet m WHERE m.glGltDtlRef =?1 and m.glDltDtlSeqNo=?2") // how do I write this?
+		 public void deleteReffNo(String reff, Integer seq);
 }
 
