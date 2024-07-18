@@ -32,11 +32,9 @@ public class GlCcdDetail {
 	private Integer glCcDtlSeqNo;
 	
 	@Column(name="CCD_ACC_BEG", length=20)
-	@JsonFormat(pattern = "dd/MM/yy")
 	private String glCcDtlBeg;
 	
 	@Column(name="CCD_ACC_END", length=20)
-	@JsonFormat(pattern = "dd/MM/yy")
 	private String glCcDtlEnd;
 	
 	@Column(name="CCD_STATUS", length=2)

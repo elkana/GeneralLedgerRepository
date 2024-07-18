@@ -19,7 +19,7 @@ public class ServiceGlCcMaster {
 		return repoGlCcMaster.findAll();
 	}
 	
-	public List<GlCcMaster> getGlCcMasterCU(String ccCode){
+	public Optional<GlCcMaster> getGlCcMasterCU(String ccCode){
 		return repoGlCcMaster.findByGlCcCode(ccCode);
 	}
 	
