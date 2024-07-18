@@ -24,6 +24,30 @@ public class ServiceGlPjMaster {
 		return repoPjMaster.findByglPjStatus(status);
 	}
 	
+	public List<GlPjMaster> getGlByPjCode(String code){
+		return repoPjMaster.findByglPjCodeContaining(code);
+	}
+	
+	public List<GlPjMaster> getGlByPjCodeSts(String status,String code){
+		return repoPjMaster.findByglPjStatusAndGlPjCodeContaining(status, code);
+	}
+	
+	public List<GlPjMaster> getGlByPjDesc(String desc){
+		return repoPjMaster.findByglPjDescContaining(desc);
+	}
+	
+	public List<GlPjMaster> getGlByPjDescSts(String status,String desc){
+		return repoPjMaster.findByglPjStatusAndGlPjDescContaining(status, desc);
+	}
+	
+	public List<GlPjMaster> getGlByPjStartDate(String dt){
+		return repoPjMaster.getByPjStartList(dt);
+	}
+	
+	public List<GlPjMaster> getGlByPjEndDate(String dt){
+		return repoPjMaster.getByPjEndList(dt);
+	}
+	
 	public String saveUpdatePjMaster(GlPjMaster pjmaster) {
 		repoPjMaster.save(pjmaster);
 		return "Submit Successfully";
