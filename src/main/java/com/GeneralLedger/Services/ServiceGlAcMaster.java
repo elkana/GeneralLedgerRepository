@@ -22,6 +22,30 @@ public class ServiceGlAcMaster {
 		return repoAcMst.findByglamacstatus(status);
 	}
 	
+	public List<GlAcMaster> getGlByAcCode(String code){
+		return repoAcMst.findByglamaccodeContaining(code);
+	}
+	
+	public List<GlAcMaster> getGlByAcCodeSts(String status, String code){
+		return repoAcMst.findByglamacstatusAndGlamaccodeContaining(status, code);
+	}
+	
+	public List<GlAcMaster> getGlByAcDesc(String desc){
+		return repoAcMst.findByglamacdescContaining(desc);
+	}
+	
+	public List<GlAcMaster> getGlByAcDescSts(String status, String desc){
+		return repoAcMst.findByglamacstatusAndGlamacdescContaining(status, desc);
+	}
+	
+	public List<GlAcMaster> getGlByAcDesc2(String desc2){
+		return repoAcMst.findByglamacdesc2Containing(desc2);
+	}
+	
+	public List<GlAcMaster> getGlByAcDesc2Sts(String status, String desc2){
+		return repoAcMst.findByglamacstatusAndGlamacdesc2Containing(status, desc2);
+	}
+	
 	public Optional<GlAcMaster> getAcCode(String code){
 	    return repoAcMst.findByglamaccode(code);
 	}

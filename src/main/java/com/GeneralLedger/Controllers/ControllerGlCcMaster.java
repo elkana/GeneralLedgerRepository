@@ -27,7 +27,7 @@ public class ControllerGlCcMaster {
 	}
 	
 	@GetMapping("/GeneralLedger/getglccmastercu")
-	public List<GlCcMaster> getGlCcMasterCU(String ccCode){
+	public Optional<GlCcMaster> getGlCcMasterCU(String ccCode){
 		return servGlCcMaster.getGlCcMasterCU(ccCode);
 	}
 	

@@ -29,6 +29,36 @@ public class ControllerGlPjMaster {
 		return servPjMaster.getGlPjStatus(status);
 	}
 	
+	@GetMapping("/GeneralLedger/getglbypjcodelist")
+	public List<GlPjMaster> getByPjCode(String code){
+		return servPjMaster.getGlByPjCode(code);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbypjcodestslist")
+	public List<GlPjMaster> getByPjCodeSts(String status,String code){
+		return servPjMaster.getGlByPjCodeSts(status, code);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbypjdesclist")
+	public List<GlPjMaster> getByPjDesc(String desc){
+		return servPjMaster.getGlByPjDesc(desc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbypjdescstslist")
+	public List<GlPjMaster> getByPjDescSts(String status,String desc){
+		return servPjMaster.getGlByPjDescSts(status, desc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbypjstartlist")
+	public List<GlPjMaster> getByPjStart(String dt){
+		return servPjMaster.getGlByPjStartDate(dt);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbypjendlist")
+	public List<GlPjMaster> getByPjEnd(String dt){
+		return servPjMaster.getGlByPjEndDate(dt);
+	}
+	
 	@PostMapping("/GeneralLedger/saveupdpjmaster")
 	public String saveUpdatePjMaster(@RequestBody GlPjMaster pjmaster) {
 		return servPjMaster.saveUpdatePjMaster(pjmaster);

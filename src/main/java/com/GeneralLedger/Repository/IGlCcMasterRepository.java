@@ -1,6 +1,7 @@
 package com.GeneralLedger.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -11,7 +12,7 @@ import com.GeneralLedger.Models.GlCcMaster;
 @Repository
 public interface IGlCcMasterRepository extends JpaRepository<GlCcMaster, String>{
 	
-	public List<GlCcMaster> findByGlCcCode(String ccCode);
+	Optional<GlCcMaster> findByGlCcCode(String ccCode);
 	
 	public List<GlCcMaster> findByGlCcStatus(String glCcSts);
 	

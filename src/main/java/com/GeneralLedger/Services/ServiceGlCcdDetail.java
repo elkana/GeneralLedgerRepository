@@ -19,8 +19,12 @@ public class ServiceGlCcdDetail {
 		return repoGlCcdDtl.findAll();
 	}
 	
-	public List<GlCcdDetail> getGlCcdDtlByCode(String ccdCode){
+	public List<GlCcdDetail> getGlCcdDtlByCodeList(String ccdCode){
 		return repoGlCcdDtl.findByglCcDtlCode(ccdCode);
+	}
+	
+	public Optional<GlCcdDetail> getGlCcDetailCU(String ccdCode, Integer ccdSeq){
+		return repoGlCcdDtl.findByglCcDtlCodeAndGlCcDtlSeqNo(ccdCode,ccdSeq);
 	}
 		
 	public String saveUpdateGlCcdDetail(GlCcdDetail ccdCs) {

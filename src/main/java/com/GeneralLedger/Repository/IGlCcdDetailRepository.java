@@ -9,10 +9,13 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.GeneralLedger.Models.GlCcdDetail;
+import com.GeneralLedger.Models.GlCcdDetailCompKey;
 
 @Repository
-public interface IGlCcdDetailRepository extends JpaRepository<GlCcdDetail,String>{
+public interface IGlCcdDetailRepository extends JpaRepository<GlCcdDetail,GlCcdDetailCompKey>{
 	
 	public List<GlCcdDetail> findByglCcDtlCode(String ccdCode);
+	
+	public Optional<GlCcdDetail> findByglCcDtlCodeAndGlCcDtlSeqNo(String ccdCode, Integer ccdSeq);
 
 }

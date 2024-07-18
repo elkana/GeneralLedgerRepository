@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yaml.snakeyaml.events.Event.ID;
 
-import com.GeneralLedger.Models.GlCcMaster;
 import com.GeneralLedger.Models.GlCcdDetail;
 import com.GeneralLedger.Services.ServiceGlCcdDetail;
 
@@ -28,9 +27,14 @@ public class ControllerGlCcdDetail {
 		return servGlCcdDtl.getGlCcdDetailList();
 	}
 	
-	@GetMapping("/GeneralLedger/getglccdetailbycode")
-	public List<GlCcdDetail> getGlCcdDtlByCode(String ccdCode){
-		return servGlCcdDtl.getGlCcdDtlByCode(ccdCode);
+	@GetMapping("/GeneralLedger/getglccdtlbycodelist")
+	public List<GlCcdDetail> getGlCcdDtlByCodeList(String ccdCode){
+		return servGlCcdDtl.getGlCcdDtlByCodeList(ccdCode);
+	}
+	
+	@GetMapping("/GeneralLedger/getglccdetailcu")
+	public Optional<GlCcdDetail> getGlCcDetailCU(String ccdCode, Integer ccdSeq){
+		return servGlCcdDtl.getGlCcDetailCU(ccdCode, ccdSeq);
 	}
 	
 	@PostMapping("/GeneralLedger/saveupdglccdetail")
