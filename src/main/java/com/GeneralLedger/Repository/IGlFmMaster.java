@@ -14,5 +14,13 @@ public interface IGlFmMaster extends JpaRepository<GlFmMaster, String>{
 	Optional<GlFmMaster> findByglfmfmfpos(String fmpos);
 	
 	List<GlFmMaster> findByglfmacstatus(String status);
+	
+	
+	public List<GlFmMaster> findByGlfmfmdescContaining(String Desc);
+	
+	public List<GlFmMaster> findByGlfmfmlevel (Integer lv);
+
+	
+	
 
 }

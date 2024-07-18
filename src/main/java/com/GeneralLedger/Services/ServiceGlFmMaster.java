@@ -16,8 +16,18 @@ public class ServiceGlFmMaster {
 	IGlFmMaster repoFmMst;
 	
 	public List<GlFmMaster> getGlFmMaster(){
-		return repoFmMst.findAll();
+		//return repoFmMst.findAll();
+		return repoFmMst.findByglfmacstatus("AC");		
 	}
+	
+	public List<GlFmMaster> getGlFmMasterByDesc(String desc){
+		return repoFmMst.findByGlfmfmdescContaining(desc);		
+	}
+	
+	public List<GlFmMaster> getGlFmMasterByLv(Integer lv){
+		return repoFmMst.findByGlfmfmlevel(lv);		
+	}
+
 	
 	public List<GlFmMaster> getFmAcSts(String status){
 		return repoFmMst.findByglfmacstatus(status);
@@ -31,5 +41,7 @@ public class ServiceGlFmMaster {
 		repoFmMst.save(fmmaster);
 		return "Submit Successfully";
 	}
+	
+
 
 }

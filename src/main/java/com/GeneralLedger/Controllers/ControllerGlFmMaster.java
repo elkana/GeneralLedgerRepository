@@ -28,6 +28,7 @@ public class ControllerGlFmMaster {
 		return servFmMst.getFmAcSts(status);
 	}
 	
+	
 	@GetMapping("/GeneralLedger/getfmpossingle")
 	public Optional<GlFmMaster> getFmpos(String fmpos) {
 		return servFmMst.getFmpos(fmpos);
@@ -37,6 +38,16 @@ public class ControllerGlFmMaster {
 	public String saveUpdateFmMaster(@RequestBody GlFmMaster acmaster) {
 		return servFmMst.saveUpdateFmMaster(acmaster) ;
 	
+	}
+	
+	@GetMapping("/GeneralLedger/getglfmmstlistbyDesc")
+	public List<GlFmMaster> getGlFmMasterByDesc(String desc){
+		return servFmMst.getGlFmMasterByDesc(desc);		
+	}
+	
+	@GetMapping("/GeneralLedger/getglfmmstlistbylv")
+	public List<GlFmMaster> getGlFmMasterByLv(Integer lv){
+		return servFmMst.getGlFmMasterByLv(lv);		
 	}
 
 
