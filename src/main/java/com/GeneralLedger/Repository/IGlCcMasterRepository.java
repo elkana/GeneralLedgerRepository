@@ -16,6 +16,14 @@ public interface IGlCcMasterRepository extends JpaRepository<GlCcMaster, String>
 	
 	public List<GlCcMaster> findByGlCcStatus(String glCcSts);
 	
+	public List<GlCcMaster> findByGlCcCodeContaining(String code);
+	
+	public List<GlCcMaster> findByGlCcStatusAndGlCcCodeContaining(String status, String code);
+	
+	public List<GlCcMaster> findByGlCcDescContaining(String desc);
+	
+	public List<GlCcMaster> findByGlCcStatusAndGlCcDescContaining(String status, String desc);
+	
 	@Query("select s.glCcDesc from GlCcMaster s where s.glCcCode=?1")
 	public String getGlCcMstDesc(String glCcCode);
 

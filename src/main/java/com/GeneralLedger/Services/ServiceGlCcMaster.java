@@ -27,6 +27,22 @@ public class ServiceGlCcMaster {
 		return repoGlCcMaster.findByGlCcStatus(glCcSts);
 	}
 	
+	public List<GlCcMaster> getGlByCcCode(String code){
+		return repoGlCcMaster.findByGlCcCodeContaining(code);
+	}
+	
+	public List<GlCcMaster> getGlByCcCodeSts(String status, String code){
+		return repoGlCcMaster.findByGlCcStatusAndGlCcCodeContaining(status, code);
+	}
+	
+	public List<GlCcMaster> getGlByCcDesc(String desc){
+		return repoGlCcMaster.findByGlCcDescContaining(desc);
+	}
+	
+	public List<GlCcMaster> getGlByCcDescSts(String status, String desc){
+		return repoGlCcMaster.findByGlCcStatusAndGlCcDescContaining(status, desc);
+	}
+	
 	public String saveUpdateGlCcMaster(GlCcMaster ccCode) {
 		repoGlCcMaster.save(ccCode);
 		return "Submit Successfully";

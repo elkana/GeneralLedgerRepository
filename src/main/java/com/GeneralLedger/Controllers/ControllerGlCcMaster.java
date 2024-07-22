@@ -42,6 +42,26 @@ public class ControllerGlCcMaster {
 		return servGlCcMaster.getGlCcMasterSts(glCcSts);
 	}
 	
+	@GetMapping("/GeneralLedger/getglbycccodelist")
+	public List<GlCcMaster> getGlByCcCode(String code){
+		return servGlCcMaster.getGlByCcCode(code);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbycccodestslist")
+	public List<GlCcMaster> getGlByCcCodeSts(String status,String code){
+		return servGlCcMaster.getGlByCcCodeSts(status, code);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbyccdesclist")
+	public List<GlCcMaster> getGlByCcDesc(String desc){
+		return servGlCcMaster.getGlByCcDesc(desc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglbyccdescstslist")
+	public List<GlCcMaster> getGlByCcDescSts(String status,String desc){
+		return servGlCcMaster.getGlByCcDescSts(status, desc);
+	}
+	
 	@GetMapping("/GeneralLedger/getglccmstdesc")
 	public String getGlCcMstDesc(String glCcCode) {
 		return servGlCcMaster.getGlCcMstDesc(glCcCode);
