@@ -16,6 +16,14 @@ public interface IGlAcMasterRepository extends JpaRepository<GlAcMaster, String>
 	
 	List<GlAcMaster> findByglamacstatus(String status);
 	
+	List<GlAcMaster> findByglamacstatusAndGlamactype(String status, String type);
+	
+	List<GlAcMaster> findByglamacstatusAndGlamactypeAndGlamaccodeContaining(String status, String type, String code);
+	
+	List<GlAcMaster> findByglamacstatusAndGlamactypeAndGlamacdescContaining(String status, String type, String desc);
+	
+	List<GlAcMaster> findByglamacstatusAndGlamactypeAndGlamacdesc2Containing(String status, String type, String desc2);
+	
 	List<GlAcMaster> findByglamaccodeContaining(String code);
 	
 	List<GlAcMaster> findByglamacstatusAndGlamaccodeContaining(String status, String code);

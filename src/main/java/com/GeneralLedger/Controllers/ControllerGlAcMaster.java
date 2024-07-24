@@ -28,6 +28,26 @@ public class ControllerGlAcMaster {
 		return servAcMst.getGlAcStatus(status);
 	}
 	
+	@GetMapping("/GeneralLedger/getglactypestslist")
+	public List<GlAcMaster> getGlAcTypeSts(String status,String type){
+		return servAcMst.getGlAcTypeSts(status, type);
+	}
+	
+	@GetMapping("/GeneralLedger/getglactypestscodelist")
+	public List<GlAcMaster> getGlAcTypeStsCode(String status,String type,String code){
+		return servAcMst.getGlAcTypeStsCode(status, type, code);
+	}
+	
+	@GetMapping("/GeneralLedger/getglactypestsdesclist")
+	public List<GlAcMaster> getGlAcTypeStsDesc(String status,String type,String desc){
+		return servAcMst.getGlAcTypeStsDesc(status, type, desc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglactypestsdesc2list")
+	public List<GlAcMaster> getGlAcTypeStsDesc2(String status,String type,String desc2){
+		return servAcMst.getGlAcTypeStsDesc2(status, type, desc2);
+	}
+	
 	@GetMapping("/GeneralLedger/getglbyaccodelist")
 	public List<GlAcMaster> getGlbyAcCode(String code){
 		return servAcMst.getGlByAcCode(code);
