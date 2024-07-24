@@ -25,6 +25,9 @@ public interface IGlGltDtailRepository extends JpaRepository<GlGltDet,GlGltDetai
 		@Procedure(procedureName = "P_POST_JOURNAL")
 		public String runPostJournal(String p_reffno, String msg);	
 		
+		@Procedure(procedureName = "P_INSERT_REFFJOURNAL")
+		public String runInsReffJournal(String p_accno, String p_reffno, String msg);
+		
 		@Procedure(procedureName = "P_UPDATE_JOURNAL")
 		public String runUpdateJournal(String p_reffno, String p_date , String p_effdate , 
 				String p_docno, String p_doctype, String p_curr, String p_reffjournal, 

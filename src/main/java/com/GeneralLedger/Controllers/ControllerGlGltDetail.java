@@ -36,6 +36,11 @@ public class ControllerGlGltDetail {
 		return servGltDtl.execPostJuournal(p_reffno, msg) ;
 	}
 	
+	@GetMapping("/journal/execinsreffjournal")
+	public String runInsReffJournal(String p_accno, String p_reffno, String msg) {
+		return servGltDtl.runInsReffJournal( p_accno,  p_reffno,  msg);		
+	}
+	
 	@GetMapping("/journal/execupdatejournal")
 	public String execUpdateJuournal(String p_reffno, String p_date , String p_effdate ,
 			String p_docno, String p_doctype, String p_curr, String p_reffjournal, 

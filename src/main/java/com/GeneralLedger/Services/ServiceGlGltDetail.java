@@ -35,6 +35,10 @@ public class ServiceGlGltDetail {
 		return repoGltDtl.runPostJournal(p_reffno, msg);		
 	}
 	
+	public String runInsReffJournal(String p_accno, String p_reffno, String msg) {
+		return repoGltDtl.runInsReffJournal( p_accno,  p_reffno,  msg);		
+	}
+	
 	public String DeleteData (String reff, Integer seq) {
 		repoGltDtl.deleteReffNo(reff, seq);
 		return "Delete Successfully";
