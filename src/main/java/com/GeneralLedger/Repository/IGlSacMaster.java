@@ -30,6 +30,12 @@ public interface IGlSacMaster extends JpaRepository<GlSacMaster, GlSacMasterComp
 	
 	List<GlSacMaster> findByglsmacstatusAndGlsmascdescContaining(String status, String desc);
 	
+	List<GlSacMaster> findByglsmacstatusAndGlsmsacacc(String status,String acc );
+	
+	List<GlSacMaster> findByglsmacstatusAndGlsmsacaccAndGlsmsacsubContaining(String status,String acc,String subacc );
+	
+	List<GlSacMaster> findByglsmacstatusAndGlsmsacaccAndGlsmascdescContaining(String status,String acc,String desc );
+	
 	@Query("select s.glsmascdesc from GlSacMaster s where s.glsmsacsub=?1")
 	public String getMstAccSubDesc(String code);
 
