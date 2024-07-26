@@ -37,8 +37,8 @@ public class ControllerGlGltDetail {
 	}
 	
 	@GetMapping("/journal/execinsreffjournal")
-	public String runInsReffJournal(String p_accno, String p_reffno, String msg) {
-		return servGltDtl.runInsReffJournal( p_accno,  p_reffno,  msg);		
+	public String runInsReffJournal(String p_accno, String p_reffno, String p_reffdate, String msg) {
+		return servGltDtl.runInsReffJournal( p_accno,  p_reffno, p_reffdate, msg);		
 	}
 	
 	@GetMapping("/journal/execupdatejournal")
