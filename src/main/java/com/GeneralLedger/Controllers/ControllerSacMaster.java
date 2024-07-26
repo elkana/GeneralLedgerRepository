@@ -59,6 +59,21 @@ public class ControllerSacMaster {
 		return servSacMst.getGlSacByStsDesc(status, desc);
 	}
 	
+	@GetMapping("/GeneralLedger/getglsacbystscodelist")
+	public List<GlSacMaster> getGlSacByStsCode(String status,String acc){
+		return servSacMst.getGlSacByStsCode(status, acc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglsacbystscodesublist")
+	public List<GlSacMaster> getGlSacByStsCodeSub(String status,String acc,String subacc){
+		return servSacMst.getGlSacByStsCodeSub(status, acc, subacc);
+	}
+	
+	@GetMapping("/GeneralLedger/getglsacbystscodedesclist")
+	public List<GlSacMaster> getGlSacByStsCodeDesc(String status,String acc,String desc){
+		return servSacMst.getGlSacByStsCodeDesc(status, acc, desc);
+	}
+	
 	@GetMapping("/GeneralLedger/getsacaccsingle")
 	public Optional<GlSacMaster> getSacCode(String acc,String subacc) {
 		return servSacMst.getSacCode(acc, subacc);
