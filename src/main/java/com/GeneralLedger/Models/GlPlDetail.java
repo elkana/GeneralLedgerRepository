@@ -23,11 +23,12 @@ public class GlPlDetail {
 	private String glPlDtlCode;
 	
 	@Id
-	@Column(name="PLD_ACC", length=20, nullable = false)
-	private String glPlDtlAcc;
-	
-	@Column(name="PLD_AC_TYPE", length=10)
+	@Column(name="PLD_AC_TYPE", length=10, nullable = false)
 	private String glPlDtlType;
+	
+	@Id
+	@Column(name="PLD_ACC", length=20, nullable =  false)
+	private String glPlDtlAcc;
 	
 	@Column(name="PLD_STATUS",length=2)
 	private String glPlDtlStatus;

@@ -39,8 +39,7 @@ public class ControllerGlCcdDetail {
 	
 	@PostMapping("/GeneralLedger/saveupdglccdetail")
 	public String saveUpdateGlCcdDetail(@RequestBody GlCcdDetail ccdCs) {
-		return servGlCcdDtl.saveUpdateGlCcdDetail(ccdCs);
-	
+		return servGlCcdDtl.saveUpdateGlCcdDetail(ccdCs);	
 	}		
 	
 }

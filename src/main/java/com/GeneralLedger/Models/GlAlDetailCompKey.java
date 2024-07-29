@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @Data
 public class GlAlDetailCompKey implements Serializable{
 	
-private String glAlCodeMstDet;
-private BigDecimal glAldSeqDet;
+private String glAlDtlCode;
+private BigDecimal glAlDtlSeqNo;
 
 }

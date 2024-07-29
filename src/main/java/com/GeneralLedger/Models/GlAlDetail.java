@@ -25,64 +25,64 @@ public class GlAlDetail {
 	
 	@Id
 	@Column (name="AL_CODE", length=20, nullable = false)
-	private String glAlCodeMstDet;
+	private String glAlDtlCode;
 	
 	@Id
 	@Column (name="ALD_SEQ", nullable = false)
-	private BigDecimal glAldSeqDet;
+	private BigDecimal glAlDtlSeqNo;
 	
 	@Column (name="ALD_ENT", length=20)
-	private String glAldEntDet;	
+	private String glAlDtlEnt;	
 	
 	@Column (name="ALD_OFF", length=20)
-	private String glAldOffDet;
+	private String glAlDtlOff;
 	
 	@Column (name="ALD_ACC", length=20)
-	private String glAldAccDet;
+	private String glAlDtlAcc;
 	
 	@Column (name="ALD_SUB", length=20)
-	private String glAldSubDet;
+	private String glAlDtlSub;
 	
 	@Column (name="ALD_CC", length=20)
-	private String glAldCcDet;
+	private String glAlDtlCc;
 	
 	@Column (name="ALD_PL", length=20)
-	private String glAldPlDet;
+	private String glAlDtlPl;
 	
 	@Column (name="ALD_PJ", length=20)
-	private String glAldPjDet;
+	private String glAlDtlPj;
 	
 	@Column (name="ALD_FU1", length=20)
-	private String glAldFu1Det;
+	private String glAlDtlFu1;
 	
 	@Column (name="ALD_FU2", length=20)
-	private String glAldFu2Det;
+	private String glAlDtlFu2;
 	
 	@Column (name="ALD_FU3", length=20)
-	private String glAldFu3Det;
+	private String glAlDtlFu3;
 	
 	@Column (name="ALD_FU4", length=20)
-	private String glAldFu4Det;
+	private String glAlDtlFu4;
 	
 	@Column (name="ALD_FU5", length=20)
-	private String glAldFu5Det;
+	private String glAlDtlFu5;
 	
 	@Column (name="ALD_PCT_AMT")
-	private BigDecimal glAldPctAmtDet;
+	private BigDecimal glAlDtlPctAmt;
 	
 	@Column (name="ALD_STATUS", length=2)
-	private String glAldStsDet;
+	private String glAlDtlStatus;
 	
 	@Column (name="AC_USER_CRE", length=15)
-	private String glAcCreUserDet;
+	private String glAlDtlUserCre;
 	
 	@Column (name="AC_DATE_CRE")
-	private Date glAlCreDateDet;	
+	private Date glAlDtlDateCre;	
 	
 	@Column (name="AC_USER_UPD", length=15)
-	private String glAlUpdUserDet;
+	private String glAlDtlUserUpd;
 
 	@Column (name="AC_DATE_UPD")
-	private Date glAlUpdDateDet;	
+	private Date glAlDtlDateUpd;	
 
 }

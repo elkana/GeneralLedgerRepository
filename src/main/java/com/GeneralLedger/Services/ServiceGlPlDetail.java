@@ -19,8 +19,12 @@ public class ServiceGlPlDetail {
 		return repoGlPlDetail.findAll();
 	}
 	
-	public List<GlPlDetail> getGlPlDetailCU(String glPlDtlSts){
-		return repoGlPlDetail.findByGlPlDtlStatus(glPlDtlSts);
+	public List<GlPlDetail> getGlPlDtlByCodeList(String glPlDtlCode){
+		return repoGlPlDetail.findByGlPlDtlCode(glPlDtlCode);
+	}
+	
+	public Optional<GlPlDetail> getGlPlDetailCU(String glPlDtlCode, String glPlDtlType, String glPlDtlAcc){
+		return repoGlPlDetail.findByGlPlDtlCodeAndGlPlDtlTypeAndGlPlDtlAcc(glPlDtlCode, glPlDtlType, glPlDtlAcc);
 	}
 	
 	public String saveUpdateGlPlDetail(GlPlDetail plDtlCode) {

@@ -18,11 +18,28 @@ import com.GeneralLedger.Services.ServiceGlAlDetail;
 
 @RestController
 public class ControllerGlAlDetail {
+	
 	@Autowired
 	ServiceGlAlDetail servGlAlDetail;
 	
 	@GetMapping("/GeneralLedger/getglaldetaillist")
-	public List<GlAlDetail> getGlAlDetail(String alcodemsdtl){
-		return servGlAlDetail.getGlAlDetail(alcodemsdtl);
+	public List<GlAlDetail> getGlAlDetailList(){
+		return servGlAlDetail.getGlAlDetailList();
 	}
+	
+	@GetMapping("/GeneralLedger/getglaldtlbycodelist")
+	public List<GlAlDetail> getGlAlDtlByCodeList(String glAlDtlCode){
+		return servGlAlDetail.getGlAlDtlByCodeList(glAlDtlCode);
+	}
+	
+	@GetMapping("/GeneralLedger/getglaldetailcu")
+	public Optional<GlAlDetail> getGlAlDetailCU(String glAlDtlCode, Integer glAlDtlSeqNo){
+		return servGlAlDetail.getGlAlDetailCU(glAlDtlCode, glAlDtlSeqNo);
+	}
+	
+	@PostMapping("/GeneralLedger/saveupdglaldetail")
+	public String saveUpdateGlAlDetail(@RequestBody GlAlDetail alDtlCode) {
+		return servGlAlDetail.saveUpdateGlAlDetail(alDtlCode);	
+	}	
+	
 }

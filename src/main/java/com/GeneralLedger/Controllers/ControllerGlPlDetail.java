@@ -27,9 +27,14 @@ public class ControllerGlPlDetail {
 		return servGlPlDetail.getGlPlDetailList();
 	}
 	
+	@GetMapping("/GeneralLedger/getglpldtlbycodelist")
+	public List<GlPlDetail> getGlPldDtlByCodeList(String glPlDtlCode){
+		return servGlPlDetail.getGlPlDtlByCodeList(glPlDtlCode);
+	}
+	
 	@GetMapping("/GeneralLedger/getglpldetailcu")
-	public List<GlPlDetail> getGlPlDetailCU(String glPlDtlSts){
-		return servGlPlDetail.getGlPlDetailCU(glPlDtlSts);
+	public Optional<GlPlDetail> getGlPlDetailCU(String glPlDtlCode, String glPlDtlType, String glPlDtlAcc){
+		return servGlPlDetail.getGlPlDetailCU(glPlDtlCode, glPlDtlType, glPlDtlAcc);
 	}
 	
 	@PostMapping("/GeneralLedger/saveupdglpldetail")

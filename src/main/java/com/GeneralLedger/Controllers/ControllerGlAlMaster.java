@@ -16,7 +16,6 @@ import org.yaml.snakeyaml.events.Event.ID;
 import com.GeneralLedger.Models.GlAlMaster;
 import com.GeneralLedger.Services.ServiceGlAlMaster;
 
-
 @RestController
 public class ControllerGlAlMaster {
 	@Autowired

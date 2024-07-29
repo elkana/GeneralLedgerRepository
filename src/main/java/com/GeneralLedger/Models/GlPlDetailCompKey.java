@@ -15,7 +15,8 @@ import jakarta.persistence.Id;
 @Data
 public class GlPlDetailCompKey implements Serializable{
 	
-	private String glPlDtlCode;
-	private String glPlDtlAcc;
+private String glPlDtlCode;
+private String glPlDtlType;
+private String glPlDtlAcc;
 
 }
